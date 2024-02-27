@@ -22,13 +22,16 @@ struct ContentView: View {
             Model3D(named: "Scene", bundle: realityKitContentBundle)
                 .padding(.bottom, 50)
 
-            Text("Hello, world!")
+            Text("Hello, welcome to the world of pokèmon")
 
-            Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
+            Button("Choose your starter pokèmon") {
+                print("Button tapped!")
+            }
                 .font(.title)
-                .frame(width: 360)
+                .frame(width: 420)
                 .padding(24)
-                .glassBackgroundEffect()
+                .background(Color.green)
+                .cornerRadius(10)
         }
         .padding()
         .onChange(of: showImmersiveSpace) { _, newValue in
